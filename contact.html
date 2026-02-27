@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Chef's Corner - Contact</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <nav class="header">
+        <a href="index.html" class="nav-logo">Chef's <span>Corner</span></a>
+        <a href="index.html" class="nav-icon-btn"><i class="fa-solid fa-house"></i></a>
+        <a href="about.html" class="nav-icon-btn"><i class="fa-solid fa-user"></i></a>
+        <a href="contact.html" class="nav-icon-btn active"><i class="fa-solid fa-message"></i></a>
+        <div class="nav-divider"></div>
+        <a href="https://discord.gg/WWDHn8e6nm" class="nav-icon-btn"><i class="fa-brands fa-discord"></i></a>
+        <a href="https://vm.tiktok.com/ZNRSoNHTB/" class="nav-icon-btn"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@ChefsCornerDev" class="nav-icon-btn"><i class="fa-brands fa-youtube"></i></a>
+        <div class="nav-divider"></div>
+        <a href="" class="nav-cta"><i class="fa-brands fa-steam"></i>Wishlist</a>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="ph-eyebrow">Get in touch</div>
+        <h1 class="ph-title">Let's <em>talk.</em></h1>
+        <p class="ph-sub">Whether you're press, a fan, a future collaborator, or just curious — drop a message. I read everything.</p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+      <div class="contact-grid">
+
+        <!-- LEFT INFO -->
+        <div class="contact-info">
+          <div class="ci-title">Find me where<br>the <em>kitchen's warm.</em></div>
+          <p class="ci-body">I'm most active on Discord and TikTok where I share devlogs and updates. For press inquiries, business questions, or anything else — use the form or reach out directly on any of these platforms.</p>
+
+          <div class="contact-channels">
+            <a href="https://discord.gg/WWDHn8e6nm" class="channel-card" target="_blank">
+              <div class="channel-icon ch-discord"><i class="fa-brands fa-discord" style="color: white;"></i></div>
+              <div class="channel-info"><div class="channel-name">Discord</div><div class="channel-handle">discord.gg/WWDHn8e6nm</div></div>
+              <div class="channel-arrow">&#8594;</div>
+            </a>
+            <a href="https://vm.tiktok.com/ZNRSoNHTB/" class="channel-card" target="_blank">
+              <div class="channel-icon ch-tiktok"><i class="fa-brands fa-tiktok" style="color: white;"></i></div>
+              <div class="channel-info"><div class="channel-name">TikTok</div><div class="channel-handle">chefs_corner_</div></div>
+              <div class="channel-arrow">&#8594;</div>
+            </a>
+            <a href="https://www.youtube.com/@ChefsCornerDev" class="channel-card" target="_blank">
+              <div class="channel-icon ch-youtube"><i class="fa-brands fa-youtube" style="color: white;"></i></div>
+              <div class="channel-info"><div class="channel-name">YouTube</div><div class="channel-handle">Chef's Corner Devlog</div></div>
+              <div class="channel-arrow">&#8594;</div>
+            </a>
+            <a href="#" class="channel-card" target="_blank">
+              <div class="channel-icon ch-steam"><i class="fa-brands fa-steam" style="color: white;"></i></div>
+              <div class="channel-info"><div class="channel-name">Steam</div><div class="channel-handle">Wishlist Chef's Corner</div></div>
+              <div class="channel-arrow">&#8594;</div>
+            </a>
+          </div>
+
+          <div class="ci-note">
+            <div class="ci-note-icon">&#9749;</div>
+            <div class="ci-note-text"><strong>Response time:</strong> I'm a solo dev so replies may take a couple of days. I do read every message though — your feedback genuinely shapes the game.</div>
+          </div>
+        </div>
+
+        <!-- RIGHT FORM -->
+        <div class="contact-form-wrap">
+          <div id="formContent">
+            <div class="form-title">Send a message</div>
+            <div class="form-sub">For press, feedback, collaboration or anything else &#8212; I'm all ears.</div>
+
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="fname">First Name</label>
+                  <input class="form-input" type="text" id="fname" placeholder="Gordon" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lname">Last Name</label>
+                  <input class="form-input" type="text" id="lname" placeholder="Ramsay">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input class="form-input" type="email" id="email" placeholder="you@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject</label>
+                <select class="form-select form-input" id="subject" required>
+                  <option value="" disabled selected>What's this about?</option>
+                  <option>Press / Media inquiry</option>
+                  <option>Bug report or feedback</option>
+                  <option>Collaboration or partnership</option>
+                  <option>Feature suggestion</option>
+                  <option>Just saying hi &#128075;</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group" style="position:relative;">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-textarea" id="message" placeholder="Tell me what's on your mind..." maxlength="600" oninput="updateCount(this)" required></textarea>
+                <div class="form-char-count" id="charCount">0 / 600</div>
+              </div>
+              <button type="submit" class="form-submit">
+                Send Message
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M8 2l6 6-6 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+        <a href="index.html" class="nav-logo">Chef's <span>Corner</span></a>
+        <p class="footer-copyright">© 2026 Chef's Corner · All Rights Reserved · Made by Alex Claudiu</p>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</body>
+</html>
