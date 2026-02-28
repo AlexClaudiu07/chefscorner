@@ -154,5 +154,20 @@
         }
     });
     </script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script>
+    const lenis = new Lenis({
+      duration: 1.2,
+      smoothWheel: true,
+      smoothTouch: false
+    })
+    
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    
+    requestAnimationFrame(raf)
+    </script>
 </body>
 </html>
