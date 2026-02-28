@@ -62,14 +62,14 @@
             <div class="dev-role-tag">Solo Indie Developer</div>
             <div class="dev-card-divider"></div>
             <div class="dev-stat-row">
-              <div class="dev-stat"><div class="dev-stat-val">1<span>yr</span></div><div class="dev-stat-label">In Dev</div></div>
-              <div class="dev-stat"><div class="dev-stat-val">120<span>+</span></div><div class="dev-stat-label">Recipes</div></div>
-              <div class="dev-stat"><div class="dev-stat-val">&#8734;</div><div class="dev-stat-label">Coffee</div></div>
+              <div class="dev-stat"><div class="dev-stat-val">4<span>yr</span></div><div class="dev-stat-label">In Dev</div></div>
+              <div class="dev-stat"><div class="dev-stat-val">Solo</div><div class="dev-stat-label">Developer</div></div>
+              <div class="dev-stat"><div class="dev-stat-val">PC</div><div class="dev-stat-label">Platform</div></div>
             </div>
             <div class="dev-pills">
-              <span class="dev-pill">&#127918; Solo Dev</span>
-              <span class="dev-pill">&#9749; Cafea daily</span>
-              <span class="dev-pill">&#127912; Art + Code</span>
+              <span class="dev-pill">&#127918; Solo Developer</span>
+              <span class="dev-pill">&#128187; Design & Code</span>
+              <span class="dev-pill">&#127912; Art Direction</span>
             </div>
             <div class="dev-socials-row">
               <a href="https://discord.gg/WWDHn8e6nm" class="dev-soc-btn"><i class="fa-brands fa-discord"></i>Discord</a>
@@ -88,11 +88,11 @@
         <div class="s-title">How we got <em>here.</em></div>
       </div>
       <div class="timeline">
-        <div class="tl-item"><div class="tl-dot">&#128161;</div><div class="tl-content"><div class="tl-date">Early 2025</div><div class="tl-text"><strong>The idea.</strong> Burnt out from playing stressful games, I started sketching out a cozy kitchen sim that would never yell at you.</div></div></div>
-        <div class="tl-item"><div class="tl-dot">&#128736;&#65039;</div><div class="tl-content"><div class="tl-date">Mid 2025</div><div class="tl-text"><strong>First prototype.</strong> A single counter, a pot, and 5 placeholder recipes. Ugly, but it felt right. The core loop worked.</div></div></div>
-        <div class="tl-item"><div class="tl-dot">&#127912;</div><div class="tl-content"><div class="tl-date">Late 2025</div><div class="tl-text"><strong>Art direction locked.</strong> The smooth lowpoly aesthetic took shape. Warm, soft, distinctly cozy — exactly the vibe I was going for.</div></div></div>
-        <div class="tl-item"><div class="tl-dot now">&#128293;</div><div class="tl-content"><div class="tl-date">2025 — Now</div><div class="tl-text"><strong>Active development.</strong> Building the upgrade system, expanding the recipe book to 120+ dishes, and getting the game ready to show the world.</div></div></div>
-        <div class="tl-item"><div class="tl-dot">&#9734;</div><div class="tl-content"><div class="tl-date">Soon&trade;</div><div class="tl-text"><strong>Steam launch.</strong> Full release, original OST, controller support, and a community that's been waiting since day one.</div></div></div>
+        <div class="tl-item"><div class="tl-dot">&#128161;</div><div class="tl-content"><div class="tl-date">Early 2025</div><div class="tl-text"><strong>The idea.</strong> Burnt out from stressful games, I began sketching a cozy kitchen experience focused on flow, comfort, and small satisfying moments.</div></div></div>
+        <div class="tl-item"><div class="tl-dot">&#128736;&#65039;</div><div class="tl-content"><div class="tl-date">Mid 2025</div><div class="tl-text"><strong>First prototype.</strong> One counter, one stove, and a few simple recipes. Rough, but the core loop already felt right.</div></div></div>
+        <div class="tl-item"><div class="tl-dot">&#127912;</div><div class="tl-content"><div class="tl-date">Late 2025</div><div class="tl-text"><strong>Art direction locked.</strong> A warm, soft visual identity started to take shape — clean, calm, and distinctly cozy.</div></div></div>
+        <div class="tl-item"><div class="tl-dot now">&#128293;</div><div class="tl-content"><div class="tl-date">2025 — Now</div><div class="tl-text"><strong>Active development.</strong> Expanding the kitchen, refining progression, and adding more handcrafted recipes while preparing the game for public release.</div></div></div>
+        <div class="tl-item"><div class="tl-dot">&#9734;</div><div class="tl-content"><div class="tl-date">Soon&trade;</div><div class="tl-text"><strong>Steam release.</strong> Final polish, full sound design, controller support, and sharing the finished experience with the community.</div></div></div>
       </div>
     </section>
 
@@ -131,6 +131,21 @@
             menu.classList.remove('open');
         }
     });
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script>
+    const lenis = new Lenis({
+      duration: 1.2,
+      smoothWheel: true,
+      smoothTouch: false
+    })
+    
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    
+    requestAnimationFrame(raf)
     </script>
 </body>
 </html>
